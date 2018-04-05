@@ -19,6 +19,8 @@ def get_first_name_of_season_winner(data, season)
   end
 end
 
+
+
 def get_contestant_name(data, occupation)
   data.each do |key, value|
     value.each do |x, z|
@@ -37,6 +39,8 @@ def get_contestant_name(data, occupation)
     end
   end
 end
+
+
 
 def count_contestants_by_hometown(data, hometown)
   city_count = 0
@@ -74,6 +78,7 @@ def get_occupation(data, hometown)
 end
 
 
+
 def get_average_age_for_season(data, season)
   age = 0
   count = 0
@@ -84,3 +89,28 @@ def get_average_age_for_season(data, season)
     end
     (age/count.to_f).round(0)
 end
+
+# ---------------------------------
+# fix this (below). Only one failing
+# ---------------------------------
+
+
+# def get_average_age_for_season(data, season)
+#   age = 0
+#   count = 0
+#
+#   data.each do |key, value|
+#     value.each do |x, z|
+#
+#         x.each do |k, v|
+#           # binding.pry
+#           if k["age"] == "age"
+#             count += 1
+#             age += v.to_i
+#           end
+#         end
+#       end
+#     end
+#     (age/count.to_f).round(0)
+#     # binding.pry
+# end
